@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n8n Learning Path</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic setup for smooth scrolling and dark theme */
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark blue-gray background */
+            color: #d1d5db; /* Default light gray text */
+        }
+        /* Particles.js canvas styling for animated background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Place it behind all other content */
+            background: linear-gradient(145deg, #1f2937, #111827);
+        }
+        /* Card styling for content sections */
+        .card {
+            background-color: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */
+            border: 1px solid #4b5563; /* Gray border */
+            border-radius: 0.75rem; /* Rounded corners */
+            padding: 1.5rem; /* Inner spacing */
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden; /* Hide the pseudo-element overflow */
+        }
+        /* Hover effect for cards */
+        .card:hover {
+            border-color: #38bdf8; /* Light blue border on hover */
+            transform: translateY(-5px); /* Slight lift effect */
+        }
+        /* Shimmer effect on hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(56, 189, 248, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        .card:hover::before {
+            left: 100%;
+        }
+        /* Accent color for text */
+        .accent-text {
+            color: #38bdf8; /* Light blue */
+        }
+        /* Styling for video links */
+        .video-link {
+            display: inline-block;
+            margin-top: 0.75rem;
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border: 1px solid #38bdf8;
+            border-radius: 0.5rem;
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+        .video-link:hover {
+            color: #ffffff;
+            background-color: #0ea5e9;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- This div is the target for the particles.js animation -->
+    <div id="particles-js"></div>
+
+    <!-- Main content container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 md:py-16">
+
+        <!-- Header Section -->
+        <section id="learning-path" class="text-center card mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight">
+                Your n8n Learning Path: From <span class="accent-text">Basics</span> to <span class="accent-text">Business</span>
+            </h1>
+            <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto">
+                Welcome! This guide provides the core video resources you need to get started with n8n, from initial setup to applying your skills in a business context.
+            </p>
+        </section>
+
+        <!-- Setup Guides Section -->
+        <section id="setup-guides" class="mt-8 card">
+            <h2 class="text-2xl font-bold text-white mb-4"><span class="mr-2">⚙️</span> Quick Setup Guides</h2>
+            <p class="text-gray-400 mb-6">Choose the setup method that's right for you.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Docker Setup Card -->
+                <div class="bg-gray-900/50 p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-white">Local Setup (On Your Computer): Docker</h3>
+                    <p class="text-gray-400 mt-2">The ultimate guide to getting n8n running on your own machine for free using Docker and Ngrok.</p>
+                    <a href="https://youtu.be/L9_kNsolv88?si=cCbFdrhtwOtn-1rq" target="_blank" class="video-link">Watch Video</a>
+                </div>
+                <!-- Render Setup Card -->
+                <div class="bg-gray-900/50 p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300">
+                    <h3 class="font-semibold text-lg text-white">Online Setup (In the Cloud): Render</h3>
+                     <p class="text-gray-400 mt-2">Learn how to self-host n8n in the cloud for free in just a few minutes with Render.</p>
+                    <a href="https://youtu.be/kk0nkfdmg5s?si=6ZpuAzfPoZ-JuLaj" target="_blank" class="video-link">Watch Video</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 1 Section -->
+        <section id="module-1" class="mt-8 card">
+            <h2 class="text-2xl font-bold text-white mb-4"><span class="mr-2">🎓</span> Module 1: Workflow Fundamentals to Mastery</h2>
+            <p class="text-gray-400 mb-6">Start here to learn the core concepts of how workflows operate and get your own n8n instance running with extra.</p>
+            <div class="bg-gray-900/50 p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300">
+                <h3 class="font-semibold text-lg text-white">N8N ULTIMATE COURSE (8+ Hours)</h3>
+                <p class="text-gray-400 mt-2">A comprehensive course designed to take you from a beginner to an expert, covering everything you need to sell high-value AI workflows.</p>
+                <a href="https://youtu.be/JFRmgIGVuMY?si=3nJCbAPFwLxG9C5I" target="_blank" class="video-link">Watch Course</a>
+            </div>
+        </section>
+
+        <!-- Module 2 Section -->
+        <section id="module-2" class="mt-8 card">
+            <h2 class="text-2xl font-bold text-white mb-4"><span class="mr-2">🪙</span> Module 2: Applying n8n for Business</h2>
+            <p class="text-gray-400 mb-6">Learn how to use your new automation skills for real-world, monetizable projects.</p>
+            <div class="bg-gray-900/50 p-6 rounded-lg hover:shadow-2xl transition-shadow duration-300">
+                <h3 class="font-semibold text-lg text-white">Build Your First AI Business in 6 Hours</h3>
+                 <p class="text-gray-400 mt-2">This ultimate beginner guide walks you through building and launching an AI-powered business from scratch.</p>
+                <a href="https://youtu.be/r0c7RhMFcww?si=hUS6WCJUwcDSfPN0" target="_blank" class="video-link">Watch Guide</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-10 mt-8 border-t border-gray-800 relative z-10">
+        <p class="text-gray-500">&copy; 2025 n8n Learning Resources</p>
+    </footer>
+
+    <script>
+        // Initialize Particles.js when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', function () {
+            particlesJS('particles-js', 
+                {
+                    "particles": {
+                        "number": {
+                            "value": 50, // Number of particles
+                            "density": { "enable": true, "value_area": 800 }
+                        },
+                        "color": { "value": "#38bdf8" }, // Particle color
+                        "shape": { "type": "circle" },
+                        "opacity": {
+                            "value": 0.3, "random": true,
+                            "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false }
+                        },
+                        "size": { "value": 3, "random": true },
+                        "line_linked": {
+                            "enable": true, "distance": 150, "color": "#4b5563", "opacity": 0.4, "width": 1
+                        },
+                        "move": {
+                            "enable": true, "speed": 2, "direction": "none", "out_mode": "out"
+                        }
+                    },
+                    "interactivity": {
+                        "detect_on": "canvas",
+                        "events": {
+                            "onhover": { "enable": true, "mode": "grab" },
+                            "onclick": { "enable": true, "mode": "push" },
+                            "resize": true
+                        },
+                        "modes": {
+                            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                            "push": { "particles_nb": 4 }
+                        }
+                    },
+                    "retina_detect": true
+                }
+            );
+        });
+    </script>
+</body>
+</html>
